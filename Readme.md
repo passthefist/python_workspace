@@ -32,66 +32,32 @@ programs, but can only be interacted with using the terminal.
 
 ## Setting Up the Environment ##
 
-You'll need 3 things first: a code editor, Docker Desktop, and the Github application. Keep track
-of any questions as you go. There's going to be a lot of stuff here, which is easier to explain
-once the environment is built. Really, all you need to know is that this will install and set up
-everything you need to work on software projects.
+You'll need 3 things first: a code editor, Docker Desktop, and the Github application. Review the
+readme for the https://github.com/passthefist/dev_container repository for some of these steps.
 
 ### 1. Fork this Repository ###
 
-Right now, this project isn't owned by you, so you'll need to create a copy of it that you own. Scroll back to
-the top of this page (or go to https://github.com/passthefist/ dev_container) if you're not on it. Click the "Fork"
-button to create a copy of this project for your Github account (forking just means creating a copy of a project).
-It will take you to a prompt, where you can choose your user in the "Owner" dropdown and just keep the defaults for
-the rest. Clicking the "Create Fork" button will create your own version  of this project owned by your account.
-You can follow this video as an example.
-
-https://github.com/passthefist/dev_container/assets/279303/49af98d3-ad88-4518-ba97-e96030523aec
+Right now, this project isn't owned by you, so you'll need to create a copy of it that you own. The
+steps to clone this project are the same as the ones for the dev_container. Click the "Fork"
+button to create a copy of this project for your Github account, which will create another repository
+for this project separate from the dev_container one. It will take you to a prompt, where you can
+choose your user in the "Owner" dropdown and just keep the defaults for the rest. Clicking the
+"Create Fork" button will create your own version of this project owned by your account.
 
 ### 2. Clone this repository locally ###
 
 Right now, the code for the project only exists on the GitHub website, but you'll need it to be
-on your computer to work on. First, open the GitHub Desktop app on your computer, then click the
-"Clone a Repository From the Internet" button. A [code repository](docs/Glossary.md#code-repository)
-is where all the code for a software project is stored, and cloning is a term Git uses for downloading
-the code in a repository and creating a copy on your computer.
+on your computer to work on. Again, this is similar to the steps for the dev_container project.
+First, open the GitHub Desktop app on your computer, then click the "Clone a Repository From the Internet" button. 
 
-In the upper left corner of the Github Desktop app, you can search for your projcets, which are called
-[repositories](docs/Glossary.md#code-repository) by Git and GitHub. Choose this one (it should be called "dev_container")
-to create a copy of the repository to work with on your computer. This is called "cloning", a term you'll see
-while in the Github Desktop App or Github Website. Once you do, it will download the code for this project
-so you can work with it and use the Github Desktop app to upload your code changes to be backed up on the
-GitHub website so the code is shown as part of a portfolio of projects and your website is published on
-the internet.
-
-https://github.com/passthefist/dev_container/assets/279303/99ec12f5-b2a5-4763-bc85-d99a23aabf25
-
-You should then see this screen once it's done, and you can open the files in your code editor by clicking 
-this button. Once the full environment is set up, you'll be able to use Git to save your changes. 
-
-![opening code repo](docs/img/first-repo.png)
+In the upper left corner of the Github Desktop app, you can search for your repositories. Choose this
+one (it should be called "python_workspace") to create a copy of the repository to work with on your computer. You will now have this repository as well as the one for the dev container from before.
 
 ### 3. Start the Python Workspace Container ###
 
-The easiest way to do this is using the command line in Visual Studio Code. The [command line](docs/Glossary.md#command-line-console)
-is a more powerful way developers, hackers, and really anyone doing I.T. work interact with computers. Typically, we interact
-with computers graphically with a mouse and all that, but the command line is more primitive. It only takes text based commands and
-only shows text based output. A user types a command on the prompt line and hits enter to run it, which is why it's called
-the command line interface. The results of the command are shown on the next line as the output. 
-
-Another name for the command line is the terminal, and this video shows how to open it in Visual Studio Code. It also
-shows a sample command to run. The command is called `echo`, which takes some text and echoes what was typed as output
-on the next line after it's run when the user presses enter.
-
-https://github.com/passthefist/dev_container/assets/279303/5c6051e5-3922-4e1b-8459-95320c8f74eb
-
-Here, we'll be using it to build and run our server with the `docker-compose` command. It has 
-options such as `build`, `up`, and `down` to build, start, and stop containers respectively.
-
-First, create and build the server by typing `docker-compose build` in the prompt and hitting enter.
-Then type `docker-compose up` and hit enter to run it. It should look similar to this video.
-
-https://github.com/passthefist/dev_container/assets/279303/c61818f3-e1e3-4535-8c2b-32a416766767
+The easiest way to do this is using the command line in Visual Studio Code, which can be opened from
+the terminal menu. Make sure Docker Desktop is running and use the `docker-compose` command to build
+the workspace container with `docker-compose build`, then start it with `docker-compose up`.
 
 **If you see an error message like this, make sure that the Docker Desktop app is running.**
 
@@ -99,24 +65,22 @@ https://github.com/passthefist/dev_container/assets/279303/c61818f3-e1e3-4535-8c
 error during connect: this error may indicate that the docker daemon is not running: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/_ping": open //./pipe/docker_engine: The system cannot find the file specified.
 ```
 
-Once built, the container can be ran and managed from the Docker Desktop app. You can also use the 
-`docker-compose up` and `docker-compose down` commands in a terminal to start and stop it respectively.
-This video shows how to start it in the Docker Desktop app. If you're following this setup, it should
-already be running and you can see that in the app, too.
-
-https://github.com/passthefist/dev_container/assets/279303/0c0ca9e8-6498-49ed-afd2-31ccca4c77fe
+Once built, the container can be ran and managed from the Docker Desktop app like the dev_container.
+You can also use the `docker-compose up` and `docker-compose down` commands in a terminal to start and
+stop it respectively.
 
 ### 4. Run the first example program ###
 
 Connect to your Python workspace by typing the command `docker attach python_workspace` into a
 terminal. This tells the `docker` program to run the `attach` command to attach your terminal to
-a docker container. Here, the command will find the container named `python_workspace` (the one
-you just created) and connect your terminal there. Importantly, this is a *different* terminal
-than the one you initially opened which was running on your computer. Now, this terminal is
-actually running on your virtual Python workspace.
+a specified docker container. Here, the command will find the container named `python_workspace`
+(the one you just created) and connect your terminal there. Importantly, this is a *different*
+terminal than the one you initially opened which was running on your computer. Now, this terminal is
+actually running on your virtual Python workspace, which has Python preinstalled. Having a
+container already set up like this avoids any issues that might make installing Python difficult or
+difference between computers. This way, the workspace is always consistent and ready to use once built.
 
-Once there, you can run the `ls` command to get a list of all the files and folders in this
-project. Refer to [this cheatsheet](docs/Commands-Cheatsheet.md) for common commands to navigate a 
+With a terminal attached to you workspace container, you can run the `ls` command to get a list of all the files and folders in this project. Refer to [this cheatsheet](docs/Commands-Cheatsheet.md) for common commands to navigate a 
 terminal environment and an explanation of them.
 
 Next, you can use the `cd` command to open the `examples` folder. Whenever you attach to your
