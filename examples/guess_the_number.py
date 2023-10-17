@@ -12,7 +12,7 @@ secret_number = 71
 
 # This is how many guesses the player will be allowed to
 # make before losing.
-num_guesses = 6
+num_guesses = 7
 
 # This is the current guess the player is on. The game
 # hasn't started yet, so it's guess 0.
