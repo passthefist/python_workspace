@@ -11,6 +11,10 @@ print()
 # a program able to keep track of groups of data. Some
 # common for a list might be having a list of available
 # dates for a hotel or a list sales made in the last month.
+#
+# The stuff in this example file isn't really used in the
+# guess_the_number.py program, but is still useful for
+# understanding Python.
 
 # To create a list, the values for the list are written
 # between square brackets. Here, this creates a list

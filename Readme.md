@@ -22,7 +22,14 @@ After completing this project, you'll have an understanding of writing code in P
 ideas that apply to other programming languages. We'll use that and combine it with what you've
 learned so far to create a web app using HTML, CSS, and Javascript.
 
-First, though, you'll start by learning the basics of Python.
+First, though, you'll start by learning the basics of Python by decoding an example program
+that is a simple guess the secret number game. Think of it like a puzzle or a toy to take apart,
+trying to figure out how it works on the inside. Other examples will help to guide the process
+as a sort of partial answer key, showing how the smaller parts work, but you'll be trying to
+understand how it all works together to make the game function. Along the way, try to keep
+track of questions or parts you are stuck in. Getting stuck is totally normal when understanding
+how some code works, and actually an important part of learning how to write code. Most of
+all, try to have fun being curious about taking apart a puzzle to put it back together again.
 
 ## Technical Introduction ## 
 With this project, you'll be creating a new virtual environment in Docker. This will be the
@@ -80,8 +87,11 @@ actually running on your virtual Python workspace, which has Python preinstalled
 container already set up like this avoids any issues that might make installing Python difficult or
 difference between computers. This way, the workspace is always consistent and ready to use once built.
 
-With a terminal attached to you workspace container, you can run the `ls` command to get a list of all the files and folders in this project. Refer to [this cheatsheet](docs/Commands-Cheatsheet.md) for common commands to navigate a 
-terminal environment and an explanation of them.
+**Any time you want to run a Python program, you'll need to do it after attaching to the python workspace container.**
+
+With a terminal attached to you workspace container, you can run the `ls` command to get a list of all 
+the files and folders in this project. Refer to [this cheatsheet](docs/Commands-Cheatsheet.md) for 
+common commands to navigate a terminal environment and an explanation of them.
 
 Next, you can use the `cd` command to open the `examples` folder. Whenever you attach to your
 python workspace to run the examples, you'll need to `cd` into the directory.
@@ -91,6 +101,10 @@ which means they are Python program files. Open `hello_world.py` in your editor 
 in your workspace with `python 1_hello_world.py`. This command tells Python to run the `1_hello_world.py`
 program. Read through the code in the file and try to match it to the output.
 
+Then, run the `guess_the_number.py` program. This is a guess the number game, where you have to guess
+a secret number. Opening it in an editor and looking through the code might be intimidating to start,
+but by the end you'll be able to understand how it works by using the other examples to help.
+
 ## Next Steps ##
 
 You've now set up everything you need to write and run Python programs. Before starting on your project,
@@ -99,20 +113,34 @@ work through some of the other programs in the examples folder to get a feel for
 Refer to [this cheatsheet](docs/Commands-Cheatsheet.md) for common commands to navigate a 
 terminal environment and an explanation of them.
 
-Start with opening `1_hello_world.py` in your code editor, then move through the rest in order. You can
-run a program with the `python` command by typing the name of the file you want to run after the command.
-For example, to run the `1_hello_world.py` program you'd use the command `python 1_hello_world.py`, which
-tells Python to read the contents of the `1_hello_world.py` file and run it as a Python program. You can
-run the other files in the same way, like `python 2_hello_world.py`
+Start with opening the tunning the `python guess_the_number.py` in your Python workspace
+container. This program is a simple game where the player tries to guess a secret number.
+There is a consistent strategy that will always allow you to find the number, see if you
+can find that strategy as you play the game. This will be the program you'll be trying to
+understand. Open the `guess_the_number.py` program in your editor and take a look. It
+might be intimidating but by going through the examples you'll be able to read the code
+and know how the game works.
 
-Think of these examples as little puzzles, and try to have fun understanding what they are doing,
-changing any of the code if you feel like it's helpful.
+The other examples are made to build on each other, starting with `1_hello_world.py`. Open
+the file in your editor and run it in the terminal that you've attached to your Python
+workspace with `python 1_hello_world.py`. This example shows one of the most basic programs.
+Each of the other examples are meant to build on each other, so after each one try going
+back to the game program and see what new parts you can start to understand. Don't expect
+to be able to understand the whole program, just little parts at a time. Eventually, start
+trying understand how the parts work together and how the program works as a whole.
+
+Remember to think of this as a puzzle to solve, and that getting stuck is part of the process.
+It's a lot to learn all at once, so work on one bit at a time and keep track of questions,
+where you're getting stuck, and any notes in general.
 
 ### Starting an Interactive Python Session ###
 
-You can also start an interactive Python session with just the `python` command and no file after it. It
-will open a console that lets you try out some Python code line by line instead of running a given 
-program file. Initially, it should look like this:
+An interactive Python session allows you to try out bits of Python at a time. You can write
+lines of code one at a time and see what they do interactively instead of running a whole file.
+
+You can start an interactive Python session with just the `python` command and no file after it. It
+will open a special console that lets you try out some Python code line by line. Initially, it should 
+look like this:
 
 ```
 Python 3.8.3 (default, Jun  9 2020, 17:39:39) 
@@ -121,7 +149,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-If you type a simple bit of code such as adding some numbers together and hit enter, it will run that
+If you type a bit of code such as adding some numbers together and hit enter, it will run that
 code and print the result on the next line.
 
 ```
@@ -133,7 +161,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 The interactive session is a real Python environment, so you can define functions and variables, and
-they will be kept even for other lines of code (see the `3_intro_variables.py` and `9_function.py` files for more on variables and functions).
+they will be kept even for other lines of code (see the `3_intro_variables.py` and `6_function.py` files 
+for more on variables and functions).
 
 ```
 Python 3.8.3 (default, Jun  9 2020, 17:39:39) 

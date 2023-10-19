@@ -2,9 +2,9 @@ services:
     python_workspace:
         container_name: python_workspace
         volumes:
-            - './:/usr/local/python_intro'
+            - './:/usr/local/python_workspace'
         image: 'python:3.8.3'
-        working_dir: /usr/local/python_intro
+        working_dir: /usr/local/python_workspace
         command: bash
         tty: true
         stdin_open: true

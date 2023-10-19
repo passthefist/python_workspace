@@ -155,6 +155,54 @@ for x in range(1,6):
     for y in range(x):
         print(x)
 
+# This function will create a list that contains
+# all the numbers from 1 to the number given as
+# a parameter to the function. It only counts
+# the normal counting numbers, so what would.
+#
+# The point of this function is to show that
+# another way to break out of a loop is by
+# returning a value. Since the return keyword
+# ends the function and returns the program to
+# where the function was called, it also stops
+# the loop where the return was used.
+#
+# Happen if it was given a number less than 1?
+# How could you fix that?
+def create_counting_list(maximum_number):
+    # Start with an empty list
+    number_list = []
+
+    # Set the current number to be added to
+    # the list to 1.
+    number_to_append = 1
+
+    # Loop until the current_number is bigger than
+    # the maxiumum number. Each loop will add the
+    # number_to_append to the number_list, and then
+    # increment the number_to_append by 1.
+    #
+    # Since the condition here is always true, it
+    # will only end if the loop is broken.
+    while True:
+        number_list.append(number_to_append)
+        number_to_append += 1
+
+        # If the number to append is bigger than
+        # the maxiumum number to count to, then
+        # the list is complete. By returning the
+        # list here it will end the loop even
+        # though it is set to loop forever. The
+        # loop will break and the program will
+        # continue where the create_counting_list
+        # function was called.
+        if number_to_append > maximum_number:
+            return number_list
+        
+numbers_1_to_10 = create_counting_list(10)
+
+print(f"These are the numbers 1 to 10: {numbers_1_to_10}")
+
 # Each loop has different uses, but for loops are often
 # simpler for more cases. In general, if you need to
 # do something with each item in a list, a for loop

@@ -25,6 +25,9 @@ print()
 # the slot's value. It's always like
 #
 # <key>: <value>
+#
+# The stuff in this example file isn't used in the guess_the_number.py
+# program, but is still useful for understanding Python.
 
 # Here, the dictionary creates a quick way to look up the capitol
 # for a state by the state's name.
