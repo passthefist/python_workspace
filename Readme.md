@@ -125,13 +125,14 @@ The other examples are made to build on each other, starting with `1_hello_world
 the file in your editor and run it in the terminal that you've attached to your Python
 workspace with `python 1_hello_world.py`. This example shows one of the most basic programs.
 Each of the other examples are meant to build on each other, so after each one try going
-back to the game program and see what new parts you can start to understand. Don't expect
-to be able to understand the whole program, just little parts at a time. Eventually, start
-trying understand how the parts work together and how the program works as a whole.
+back to the game program and see what new parts you can start to understand. You'll be
+going back and forth between the examples and the game program as you go, using the examples
+as clues to solving the puzzle. Don't expect to be able to understand the whole program all
+at once, just little parts at a time. Eventually, start trying understand how the parts work
+together and how the program works as a whole.
 
-Remember to think of this as a puzzle to solve, and that getting stuck is part of the process.
-It's a lot to learn all at once, so work on one bit at a time and keep track of questions,
-where you're getting stuck, and any notes in general.
+Remember that getting stuck is part of the process. It's a lot to learn, so focus on one bit
+at a time and keep track of questions, where you're getting stuck, and any notes in general.
 
 ### Starting an Interactive Python Session ###
 

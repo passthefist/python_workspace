@@ -37,7 +37,7 @@ guessed_correctly = False
 
 # This function gets a guess from the player. It loops
 # until the player gives a valid number as a guess
-# See 6_functions.py for what this means.
+# The 6_functions.py file will be helpful here.
 def get_guess():
     # This will loop until the player gives a valid number
     # as input for their guess.
